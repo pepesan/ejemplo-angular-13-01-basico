@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'mixins';
   cadena = 'valor';
+  cuartoValor = 'Cuarto Milenio';
 }
