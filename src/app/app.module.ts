@@ -9,6 +9,9 @@ import { PersonasComponent } from './components/personas/personas.component';
 import { CondicionalesComponent } from './components/condicionales/condicionales.component';
 import { SalidasComponent } from './components/salidas/salidas.component';
 import { TodoService } from './services/todo.service';
+import { PartidosComponent } from './components/partidos/partidos.component';
+import {HttpClientModule} from "@angular/common/http";
+import {PartidosService} from "./services/partidos.service";
 
 @NgModule({
   declarations: [
@@ -16,15 +19,18 @@ import { TodoService } from './services/todo.service';
     TodosComponent,
     PersonasComponent,
     CondicionalesComponent,
-    SalidasComponent
+    SalidasComponent,
+    PartidosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     TodoService,
+    PartidosService,
     {provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
   bootstrap: [AppComponent]
 })
