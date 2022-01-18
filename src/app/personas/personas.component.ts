@@ -23,7 +23,8 @@ export class PersonasComponent implements OnInit {
     let newPersona= new Persona(this.persona.nombre, this.persona.direccion);
     this.personas.push(newPersona);
     this.persona= new Persona();
-
+    // this.persona.nombre = "";
+    // this.persona.direccion = "";
   }
 
 }

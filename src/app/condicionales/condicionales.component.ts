@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Persona} from "../personas/persona";
 
 @Component({
   selector: 'app-condicionales',
@@ -8,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class CondicionalesComponent implements OnInit {
 
   visible: boolean;
+  persona: Persona;
 
   constructor() {
     this.visible = true;
+    this.persona = new Persona("Pepe", "San");
   }
 
   ngOnInit(): void {
+
   }
 
   cambiaBoolean() {
