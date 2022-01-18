@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoService} from "../../services/todo.service";
 
 @Component({
   selector: 'app-todos',
@@ -12,8 +13,15 @@ export class TodosComponent implements OnInit {
     {text: "revisar el coche"}
   ];
   todo: any = {text: ""};
+  cadena: string;
 
-  constructor() { }
+  // private miServicio:TodoService;
+
+  constructor(private miServicio: TodoService) {
+    // this.miServicio=new TodoService();
+    this.cadena = this.miServicio.cadena;
+    this.cadena = this.miServicio.dameAlgo();
+  }
 
 
 

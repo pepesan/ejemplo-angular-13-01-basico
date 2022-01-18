@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodosComponent } from './todos/todos.component';
+import { TodosComponent } from './components/todos/todos.component';
 import {FormsModule} from "@angular/forms";
-import { PersonasComponent } from './personas/personas.component';
-import { CondicionalesComponent } from './condicionales/condicionales.component';
-import { SalidasComponent } from './salidas/salidas.component';
+import { PersonasComponent } from './components/personas/personas.component';
+import { CondicionalesComponent } from './components/condicionales/condicionales.component';
+import { SalidasComponent } from './components/salidas/salidas.component';
+import { TodoService } from './services/todo.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { SalidasComponent } from './salidas/salidas.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [{provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
+  providers: [
+    TodoService,
+    {provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
