@@ -1,0 +1,11 @@
+<h4>Añadir tarea</h4>
+<form (submit)="addPersona()" >
+  <input type="text" [(ngModel)]="persona.nombre"
+         [ngModelOptions]="{standalone: true}"/>
+</form>
+<h3>Listado de Personas</h3>
+<ul>
+  <li *ngFor="let persona of personas">
+    {{persona.nombre}}
+  </li>
+</ul>
