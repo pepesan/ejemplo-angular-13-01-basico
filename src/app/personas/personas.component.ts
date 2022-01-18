@@ -11,7 +11,7 @@ export class PersonasComponent implements OnInit {
   personas: Persona[];
   persona: Persona;
 
-  constructor() { 
+  constructor() {
     this.personas = [];
     this.persona = new Persona();
   }
@@ -20,10 +20,10 @@ export class PersonasComponent implements OnInit {
   }
   public addPersona(){
     console.log("addPersona");
-    let newPersona= new Persona(this.persona.nombre);
+    let newPersona= new Persona(this.persona.nombre, this.persona.direccion);
     this.personas.push(newPersona);
     this.persona= new Persona();
-    
+
   }
 
 }

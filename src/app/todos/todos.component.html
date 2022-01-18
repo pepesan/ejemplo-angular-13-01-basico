@@ -1,7 +1,10 @@
 <h4>Añadir tarea</h4>
 <form (submit)="addTodo()" >
+  <div>
+  <label>Nombre</label>
   <input type="text" [(ngModel)]="todo.text"
          [ngModelOptions]="{standalone: true}"/>
+  </div>
 </form>
 <h4>{{todo.text}}</h4>
 <h3>Listado de tareas</h3>

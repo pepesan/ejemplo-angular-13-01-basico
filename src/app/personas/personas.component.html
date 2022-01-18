@@ -1,7 +1,18 @@
 <h4>Añadir tarea</h4>
 <form (submit)="addPersona()" >
-  <input type="text" [(ngModel)]="persona.nombre"
+  <div>
+    <label>Nombre</label>
+    <input type="text" [(ngModel)]="persona.nombre"
          [ngModelOptions]="{standalone: true}"/>
+  </div>
+  <div>
+    <label>Dirección</label>
+    <input type="text" [(ngModel)]="persona.direccion"
+           [ngModelOptions]="{standalone: true}"/>
+  </div>
+  <div>
+    <input type="submit" value="Enviar">
+  </div>
 </form>
 <h3>Listado de Personas</h3>
 <ul>
