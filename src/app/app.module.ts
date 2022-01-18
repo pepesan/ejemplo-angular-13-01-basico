@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import {FormsModule} from "@angular/forms";
 import { PersonasComponent } from './personas/personas.component';
+import { CondicionalesComponent } from './condicionales/condicionales.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
-    PersonasComponent
+    PersonasComponent,
+    CondicionalesComponent
   ],
   imports: [
     BrowserModule,
