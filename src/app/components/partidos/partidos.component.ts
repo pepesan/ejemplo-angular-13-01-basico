@@ -30,7 +30,7 @@ export class PartidosComponent implements OnInit {
       console.log(data.length);
 
       data.forEach( (value : Partido) => {
-        //console.log(value);
+        console.log(value);
         //let partido: Partido = new Partido(value.nombre, value.dipu, value.imagen);
         this.partidosVisibles.push(value);
       });
