@@ -12,6 +12,7 @@ import { TodoService } from './services/todo.service';
 import { PartidosComponent } from './components/partidos/partidos.component';
 import {HttpClientModule} from "@angular/common/http";
 import {PartidosService} from "./services/partidos.service";
+import { EventosComponent } from './components/eventos/eventos.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {PartidosService} from "./services/partidos.service";
     PersonasComponent,
     CondicionalesComponent,
     SalidasComponent,
-    PartidosComponent
+    PartidosComponent,
+    EventosComponent
   ],
   imports: [
     BrowserModule,
