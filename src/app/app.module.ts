@@ -13,6 +13,7 @@ import { PartidosComponent } from './components/partidos/partidos.component';
 import {HttpClientModule} from "@angular/common/http";
 import {PartidosService} from "./services/partidos.service";
 import { EventosComponent } from './components/eventos/eventos.component';
+import {FormulariosModule} from "./modules/formularios/formularios.module";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { EventosComponent } from './components/eventos/eventos.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormulariosModule
   ],
   providers: [
     TodoService,
