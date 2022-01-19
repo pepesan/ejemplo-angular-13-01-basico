@@ -13,7 +13,7 @@ import { PartidosComponent } from './components/partidos/partidos.component';
 import {HttpClientModule} from "@angular/common/http";
 import {PartidosService} from "./services/partidos.service";
 import { EventosComponent } from './components/eventos/eventos.component';
-import {FormulariosModule} from "./modules/formularios/formularios.module";
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +23,14 @@ import {FormulariosModule} from "./modules/formularios/formularios.module";
     CondicionalesComponent,
     SalidasComponent,
     PartidosComponent,
-    EventosComponent
+    EventosComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    FormulariosModule
+    HttpClientModule
   ],
   providers: [
     TodoService,

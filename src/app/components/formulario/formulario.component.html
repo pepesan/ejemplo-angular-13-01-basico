@@ -1,0 +1,56 @@
+<h2>Ejemplo de formulario no reactivo</h2>
+<form (submit)="onSubmit()" #heroForm="ngForm">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name"
+           required
+           [(ngModel)]="model.name" name="name"
+           #name="ngModel">
+    <div [hidden]="name.valid || name.pristine"
+         class="alert alert-danger">
+      Name is required
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="alterEgo">Alter Ego</label>
+    <input type="text" class="form-control" id="alterEgo"
+           [(ngModel)]="model.alterEgo" name="alterEgo">
+  </div>
+  <div class="form-group">
+    <label for="power">Hero Power</label>
+    <select class="form-control" id="power"
+            required
+            [(ngModel)]="model.power" name="power"
+            #power="ngModel">
+      <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+    </select>
+    <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+      Power is required
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+  <button type="button" class="btn btn-default"
+          (click)="newHero(); heroForm.reset()">New Hero</button>
+</form>
+<div class="form-group">
+  <label>Valores de validación del formulario</label>
+  <ul>
+    <li>Valid: {{heroForm.form.valid}}</li>
+    <li>Invalid: {{heroForm.form.invalid}}</li>
+    <li>Touched: {{heroForm.form.touched}}</li>
+    <li>Untouched: {{heroForm.form.untouched}}</li>
+    <li>Pristine: {{heroForm.form.pristine}}</li>
+    <li>Dirty: {{heroForm.form.dirty}}</li>
+  </ul>
+</div>
+<div class="form-group">
+  <label>Valores de validación del campo name</label>
+  <ul>
+    <li>Valid: {{name.valid}}</li>
+    <li>Invalid: {{name.invalid}}</li>
+    <li>Touched: {{name.touched}}</li>
+    <li>Untouched: {{name.untouched}}</li>
+    <li>Pristine: {{name.pristine}}</li>
+    <li>Dirty: {{name.dirty}}</li>
+  </ul>
+</div>
