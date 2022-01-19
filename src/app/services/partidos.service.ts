@@ -13,7 +13,7 @@ export class PartidosService {
   constructor(private _httpClient: HttpClient) {
     console.log('PartidosService inicializado...');
   }
-  getData(){
+  public getData():Observable<Partido[]> {
     return this._httpClient.get<Observable<Partido[]>>(this.url)
       .pipe(catchError(this.handleError('get', [])));
   }

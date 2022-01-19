@@ -10,7 +10,7 @@ import {Observable} from "rxjs";
 })
 export class PartidosComponent implements OnInit {
 
-  partidos: Promise<Partido[]>;
+  partidos: Promise<Partido[] | undefined>;
   partidosVisibles: Partido[];
   partidosObservable: Observable<Partido[]>;
   constructor(private _partidosService: PartidosService) {
@@ -25,7 +25,7 @@ export class PartidosComponent implements OnInit {
 
   ngOnInit(): void {
     // subscribiendome al observable para procesar los datos y pasarlos a la vista
-    this.partidosObservable.subscribe((data) => {
+    this.partidosObservable.subscribe((data: Partido[]) => {
       console.log(data);
       console.log(data.length);
 
