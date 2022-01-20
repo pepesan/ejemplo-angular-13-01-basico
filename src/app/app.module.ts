@@ -15,6 +15,8 @@ import {PartidosService} from "./services/partidos.service";
 import { EventosComponent } from './components/eventos/eventos.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { FormReactivoComponent } from './components/form-reactivo/form-reactivo.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FormReactivoComponent } from './components/form-reactivo/form-reactivo.
     PartidosComponent,
     EventosComponent,
     FormularioComponent,
-    FormReactivoComponent
+    FormReactivoComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
