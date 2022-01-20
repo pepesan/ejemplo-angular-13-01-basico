@@ -30,4 +30,41 @@
     <li>Dirty: {{profileForm.dirty}}</li>
   </ul>
 </div>
+<h2>Formulario FormBuild Reactivo</h2>
+<form (submit)="onSubmit()" [formGroup]="profileForm2">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+    <div *ngIf="profileForm2.controls['firstName']?.touched && profileForm2.controls['firstName']?.invalid && profileForm2.controls['firstName'].status=='INVALID'"
+         class="alert alert-danger">
+      <div *ngIf="profileForm2.controls['firstName'].errors?.['required'] == true">
+        Name is required.
+      </div>
+      <div *ngIf="profileForm2.controls['firstName'].errors?.['minlength']">
+        Your name has only
+        {{profileForm2.controls['firstName'].errors?.['minlength']?.actualLength}} characters while
+        the min lenght is
+        {{profileForm2.controls['firstName'].errors?.['minlength']?.requiredLength}}
+      </div>
+    </div>
+  </label>
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <input type="submit" [disabled]="!profileForm2.valid" value="Submit"/>
+</form>
+<button (click)="cambiaInput2()">Cambia</button>
+<h2>{{profileForm2.status}}</h2>
+<div class="form-group">
+  <label>Valores de validación del formulario</label>
+  <ul>
+    <li>Valid: {{profileForm2.valid}}</li>
+    <li>Invalid: {{profileForm2.invalid}}</li>
+    <li>Touched: {{profileForm2.touched}}</li>
+    <li>Untouched: {{profileForm2.untouched}}</li>
+    <li>Pristine: {{profileForm2.pristine}}</li>
+    <li>Dirty: {{profileForm2.dirty}}</li>
+  </ul>
+</div>
 
