@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { PersonasComponent } from './components/personas/personas.component';
 import { CondicionalesComponent } from './components/condicionales/condicionales.component';
 import { SalidasComponent } from './components/salidas/salidas.component';
@@ -14,6 +14,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {PartidosService} from "./services/partidos.service";
 import { EventosComponent } from './components/eventos/eventos.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { FormReactivoComponent } from './components/form-reactivo/form-reactivo.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     SalidasComponent,
     PartidosComponent,
     EventosComponent,
-    FormularioComponent
+    FormularioComponent,
+    FormReactivoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     TodoService,

@@ -1,0 +1,33 @@
+<h2>Formulario Simple Reactivo</h2>
+<label>
+  Name:
+  <input type="text" [formControl]="name">
+</label>
+<button (click)="cambiaInput()">Cambia</button>
+<h2>{{name.value}}</h2>
+
+<h2>Formulario FormGroup Reactivo</h2>
+<form (submit)="onSubmit()" [formGroup]="profileForm">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName">
+  </label>
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <input type="submit" [disabled]="!profileForm.valid" value="Submit"/>
+</form>
+<button (click)="cambiaInput2()">Cambia</button>
+<div class="form-group">
+  <label>Valores de validación del formulario</label>
+  <ul>
+    <li>Valid: {{profileForm.valid}}</li>
+    <li>Invalid: {{profileForm.invalid}}</li>
+    <li>Touched: {{profileForm.touched}}</li>
+    <li>Untouched: {{profileForm.untouched}}</li>
+    <li>Pristine: {{profileForm.pristine}}</li>
+    <li>Dirty: {{profileForm.dirty}}</li>
+  </ul>
+</div>
+
