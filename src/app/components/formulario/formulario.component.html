@@ -54,3 +54,12 @@
     <li>Dirty: {{name.dirty}}</li>
   </ul>
 </div>
+
+<div class="container">
+  <h2>Listado de Heroes</h2>
+  <ul>
+    <li *ngFor="let heroe of heroes" >
+      {{heroe.name}}
+    </li>
+  </ul>
+</div>

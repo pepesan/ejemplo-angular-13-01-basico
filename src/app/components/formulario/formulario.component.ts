@@ -8,7 +8,7 @@ import {Hero} from "./hero";
 })
 export class FormularioComponent implements OnInit {
 
-
+  heroes: Hero[] = [];
   // variable usada en el select del formulario
   powers = ['Really Smart', 'Super Flexible',
     'Super Hot', 'Weather Changer'];
@@ -22,6 +22,8 @@ export class FormularioComponent implements OnInit {
 
   onSubmit() {
     console.log(this.model);
+    this.heroes.push(this.model);
+    this.newHero();
   }
 
   newHero() {
